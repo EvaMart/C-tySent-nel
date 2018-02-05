@@ -15,8 +15,8 @@ app = Flask(__name__)
 #Configure MongoDB database login
 #app.config['MONGO_DBNAME'] = 'CitySen'
 #app.config['MONGO_URI']= 'mongodb://localhost/CitySen'
-app.config['MONGO_DBNAME'] = 'selendatabase'
-app.config['MONGO_URI']= 'mongodb://selen123:bugra123@ds223738.mlab.com:23738/selendatabase'
+app.config['MONGO_DBNAME'] = 
+app.config['MONGO_URI']= 
 app.config['DEBUG'] = True
 
 mongo = PyMongo(app)
