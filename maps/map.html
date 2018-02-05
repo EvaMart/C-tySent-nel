@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_738f9e105c6a448c84ff21a2ebe8dc0a {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_738f9e105c6a448c84ff21a2ebe8dc0a" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_738f9e105c6a448c84ff21a2ebe8dc0a = L.map(
+                                  'map_738f9e105c6a448c84ff21a2ebe8dc0a',
+                                  {center: [41.390205,2.154007],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_852b8d436165400cb7f5094748777021 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+        
+    
+            var feature_group_6b0c457848124b11a9aa7e5ec17fc839 = L.featureGroup(
+                ).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+        
+    
+
+            var marker_a86a04b3e552461b835f94ded50f2734 = L.marker(
+                [41.39174893,2.1552515],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_d7ea0372f2a3495485b105ca25164d31 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a86a04b3e552461b835f94ded50f2734.setIcon(icon_d7ea0372f2a3495485b105ca25164d31);
+            
+    
+            var popup_ada1c3a0dcb9415f9ef12977b9e9e66e = L.popup({maxWidth: '300'});
+
+            
+                var html_6dde418865a2474eb8837a9e1a352a0f = $('<div id="html_6dde418865a2474eb8837a9e1a352a0f" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_ada1c3a0dcb9415f9ef12977b9e9e66e.setContent(html_6dde418865a2474eb8837a9e1a352a0f);
+            
+
+            marker_a86a04b3e552461b835f94ded50f2734.bindPopup(popup_ada1c3a0dcb9415f9ef12977b9e9e66e);
+
+            
+        
+    
+
+            var marker_a1c8772cfa0f4539966d45ffd0b8bb5b = L.marker(
+                [41.38060838,2.17855453],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_7b17261dc6444fce95f9f6c1736e278a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a1c8772cfa0f4539966d45ffd0b8bb5b.setIcon(icon_7b17261dc6444fce95f9f6c1736e278a);
+            
+    
+            var popup_33f10af4d9d144cab265a1bfc3730671 = L.popup({maxWidth: '300'});
+
+            
+                var html_82022658a78e4da0bddb9dee4a5af331 = $('<div id="html_82022658a78e4da0bddb9dee4a5af331" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_33f10af4d9d144cab265a1bfc3730671.setContent(html_82022658a78e4da0bddb9dee4a5af331);
+            
+
+            marker_a1c8772cfa0f4539966d45ffd0b8bb5b.bindPopup(popup_33f10af4d9d144cab265a1bfc3730671);
+
+            
+        
+    
+
+            var marker_8b1ed6ec5fb442f2a3116f68a83a1827 = L.marker(
+                [41.40031233,2.20696449],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_e2f2219b1a3745268b95f5ed45762a10 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8b1ed6ec5fb442f2a3116f68a83a1827.setIcon(icon_e2f2219b1a3745268b95f5ed45762a10);
+            
+    
+            var popup_eff93dded3ef4a0695b5ef45f561d2b9 = L.popup({maxWidth: '300'});
+
+            
+                var html_f99116206c37466abb36bf364ba88bc4 = $('<div id="html_f99116206c37466abb36bf364ba88bc4" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_eff93dded3ef4a0695b5ef45f561d2b9.setContent(html_f99116206c37466abb36bf364ba88bc4);
+            
+
+            marker_8b1ed6ec5fb442f2a3116f68a83a1827.bindPopup(popup_eff93dded3ef4a0695b5ef45f561d2b9);
+
+            
+        
+    
+
+            var marker_6f739642cc9a4ca6ae73a285ff1633a5 = L.marker(
+                [41.39458206,2.18215942],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_7a562c20dd1f41d1b1954d1790f9fea2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6f739642cc9a4ca6ae73a285ff1633a5.setIcon(icon_7a562c20dd1f41d1b1954d1790f9fea2);
+            
+    
+            var popup_31acfa586d0f4371b9bf2b26cfa05810 = L.popup({maxWidth: '300'});
+
+            
+                var html_6c27ef9761de4be79143e041d2f662a6 = $('<div id="html_6c27ef9761de4be79143e041d2f662a6" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_31acfa586d0f4371b9bf2b26cfa05810.setContent(html_6c27ef9761de4be79143e041d2f662a6);
+            
+
+            marker_6f739642cc9a4ca6ae73a285ff1633a5.bindPopup(popup_31acfa586d0f4371b9bf2b26cfa05810);
+
+            
+        
+    
+
+            var marker_2cf7ded176b34681984dbb2c2c4bb7aa = L.marker(
+                [41.37603569,2.16859818],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_79fe078b2aac4ed89b0e2430e64a343f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2cf7ded176b34681984dbb2c2c4bb7aa.setIcon(icon_79fe078b2aac4ed89b0e2430e64a343f);
+            
+    
+            var popup_4e79621304294a82b79976ebd8d14d1b = L.popup({maxWidth: '300'});
+
+            
+                var html_0dad053c11cb4375aa760078c8aaad39 = $('<div id="html_0dad053c11cb4375aa760078c8aaad39" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_4e79621304294a82b79976ebd8d14d1b.setContent(html_0dad053c11cb4375aa760078c8aaad39);
+            
+
+            marker_2cf7ded176b34681984dbb2c2c4bb7aa.bindPopup(popup_4e79621304294a82b79976ebd8d14d1b);
+
+            
+        
+    
+
+            var marker_1ea1ee81f8c241a4802584b876b24468 = L.marker(
+                [41.37777464,2.1451664],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_6b0c457848124b11a9aa7e5ec17fc839);
+            
+    
+
+                var icon_6248bd89c2454d509d2712ced50b9de9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1ea1ee81f8c241a4802584b876b24468.setIcon(icon_6248bd89c2454d509d2712ced50b9de9);
+            
+    
+            var popup_8f7691cac3a84a16959ac70a9c64d2f6 = L.popup({maxWidth: '300'});
+
+            
+                var html_719ea9fa00ee416d9eeb80aea1c09619 = $('<div id="html_719ea9fa00ee416d9eeb80aea1c09619" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_8f7691cac3a84a16959ac70a9c64d2f6.setContent(html_719ea9fa00ee416d9eeb80aea1c09619);
+            
+
+            marker_1ea1ee81f8c241a4802584b876b24468.bindPopup(popup_8f7691cac3a84a16959ac70a9c64d2f6);
+
+            
+        
+    
+            var feature_group_51456ccb01b144e3bb82848504afe708 = L.featureGroup(
+                ).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+        
+    
+
+            var marker_da576b9858c84303bd4db62018361942 = L.marker(
+                [41.39368062,2.16791153],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_51456ccb01b144e3bb82848504afe708);
+            
+    
+
+                var icon_187cd1c39e36430c92de8a62528d19ea = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_da576b9858c84303bd4db62018361942.setIcon(icon_187cd1c39e36430c92de8a62528d19ea);
+            
+    
+            var popup_628026c6a21243fa8817b5e4c0656bf9 = L.popup({maxWidth: '300'});
+
+            
+                var html_5604587ba4904a79b968f40eab3d5298 = $('<div id="html_5604587ba4904a79b968f40eab3d5298" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_628026c6a21243fa8817b5e4c0656bf9.setContent(html_5604587ba4904a79b968f40eab3d5298);
+            
+
+            marker_da576b9858c84303bd4db62018361942.bindPopup(popup_628026c6a21243fa8817b5e4c0656bf9);
+
+            
+        
+    
+
+            var marker_02820e38c46643ad923350ef1f2e524d = L.marker(
+                [41.390445,2.17853308],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_51456ccb01b144e3bb82848504afe708);
+            
+    
+
+                var icon_c5d806d678a542b89660a90261afced2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_02820e38c46643ad923350ef1f2e524d.setIcon(icon_c5d806d678a542b89660a90261afced2);
+            
+    
+            var popup_4d29e57b190240a38926b85c0234f098 = L.popup({maxWidth: '300'});
+
+            
+                var html_6039b8aa60874b9ea2a638173d908c9b = $('<div id="html_6039b8aa60874b9ea2a638173d908c9b" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_4d29e57b190240a38926b85c0234f098.setContent(html_6039b8aa60874b9ea2a638173d908c9b);
+            
+
+            marker_02820e38c46643ad923350ef1f2e524d.bindPopup(popup_4d29e57b190240a38926b85c0234f098);
+
+            
+        
+    
+
+            var marker_cd8b866ad29940b3b1a8e07a311f2b14 = L.marker(
+                [41.38044738,2.1608305],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_51456ccb01b144e3bb82848504afe708);
+            
+    
+
+                var icon_841650ec61fb403e9bedc75f35427402 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cd8b866ad29940b3b1a8e07a311f2b14.setIcon(icon_841650ec61fb403e9bedc75f35427402);
+            
+    
+            var popup_9e96aac4dbdd4d7ebc42f09a4dcd8bc8 = L.popup({maxWidth: '300'});
+
+            
+                var html_51517feb5bd7435c9534ca3bfbc36512 = $('<div id="html_51517feb5bd7435c9534ca3bfbc36512" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_9e96aac4dbdd4d7ebc42f09a4dcd8bc8.setContent(html_51517feb5bd7435c9534ca3bfbc36512);
+            
+
+            marker_cd8b866ad29940b3b1a8e07a311f2b14.bindPopup(popup_9e96aac4dbdd4d7ebc42f09a4dcd8bc8);
+
+            
+        
+    
+
+            var marker_888a3442a48043b1a6f4c290ab0e4207 = L.marker(
+                [41.381349,2.1910429],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_51456ccb01b144e3bb82848504afe708);
+            
+    
+
+                var icon_9a44ea2e057a4b2db924e941916d6a08 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_888a3442a48043b1a6f4c290ab0e4207.setIcon(icon_9a44ea2e057a4b2db924e941916d6a08);
+            
+    
+            var popup_137803a5b15f4f4d95a3d100c0ae8787 = L.popup({maxWidth: '300'});
+
+            
+                var html_6875000087d24c8eb0ba5d6b28a2582c = $('<div id="html_6875000087d24c8eb0ba5d6b28a2582c" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_137803a5b15f4f4d95a3d100c0ae8787.setContent(html_6875000087d24c8eb0ba5d6b28a2582c);
+            
+
+            marker_888a3442a48043b1a6f4c290ab0e4207.bindPopup(popup_137803a5b15f4f4d95a3d100c0ae8787);
+
+            
+        
+    
+
+            var marker_5f27f0d2f9114f5a82cfb30a82d42ce7 = L.marker(
+                [41.39503277,2.15374947],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_51456ccb01b144e3bb82848504afe708);
+            
+    
+
+                var icon_486450b4523c4573bffdb36336aa8fc3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5f27f0d2f9114f5a82cfb30a82d42ce7.setIcon(icon_486450b4523c4573bffdb36336aa8fc3);
+            
+    
+            var popup_1da137cd334e458abdfbe2382339375b = L.popup({maxWidth: '300'});
+
+            
+                var html_d26c6cbb1eb04d269e109034443a54e6 = $('<div id="html_d26c6cbb1eb04d269e109034443a54e6" style="width: 100.0%; height: 100.0%;">Description: <br\><br\>This is a description of what happended<br\><br\> <a href="http://www.wikipedia.org" target="_parent">details</a></div>')[0];
+                popup_1da137cd334e458abdfbe2382339375b.setContent(html_d26c6cbb1eb04d269e109034443a54e6);
+            
+
+            marker_5f27f0d2f9114f5a82cfb30a82d42ce7.bindPopup(popup_1da137cd334e458abdfbe2382339375b);
+
+            
+        
+    
+            var feature_group_74e0d939fb5045df976db438f24b41f0 = L.featureGroup(
+                ).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+        
+    
+
+            
+
+                var geo_json_048ce9c143c343a88701b88a1ac3f5a8 = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[2.111732, 41.384202], [2.11838, 41.385978], [2.125754, 41.387799], [2.126634, 41.388004], [2.12721, 41.388107], [2.127933, 41.38802], [2.128491, 41.387731], [2.128904, 41.387308], [2.12986, 41.385915], [2.130745, 41.38408], [2.13189, 41.382022], [2.132495, 41.381461], [2.13383, 41.381257], [2.135842, 41.381921], [2.137953, 41.382706], [2.138584, 41.382794], [2.13936, 41.382699]], "type": "LineString"}, "properties": {"highlight": {}, "style": {"color": "#0a9b00", "fillOpacity": 0.7, "weight": 3}}, "type": "Feature"}], "type": "FeatureCollection"}
+                    
+                    ).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+                geo_json_048ce9c143c343a88701b88a1ac3f5a8.setStyle(function(feature) {return feature.properties.style;});
+
+            
+    
+            var layer_control_bcc2b5d38e7841f79555cac5961da9d2 = {
+                base_layers : { "openstreetmap" : tile_layer_852b8d436165400cb7f5094748777021, },
+                overlays : { "Sexual" : feature_group_6b0c457848124b11a9aa7e5ec17fc839,"Robbery" : feature_group_51456ccb01b144e3bb82848504afe708,"Assault" : feature_group_74e0d939fb5045df976db438f24b41f0,"metro" : geo_json_048ce9c143c343a88701b88a1ac3f5a8, }
+                };
+            L.control.layers(
+                layer_control_bcc2b5d38e7841f79555cac5961da9d2.base_layers,
+                layer_control_bcc2b5d38e7841f79555cac5961da9d2.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+        
+    
+                var lat_lng_popup_fab60c6edc5b459fa9bf9eeda4697980 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_fab60c6edc5b459fa9bf9eeda4697980
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_738f9e105c6a448c84ff21a2ebe8dc0a);
+                    }
+                map_738f9e105c6a448c84ff21a2ebe8dc0a.on('click', latLngPop);
+            
+</script>

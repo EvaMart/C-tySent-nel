@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="jumbotron">
+  <div class="container myBackground" style="padding-bottom: 15px">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method="POST" action="{{ url_for('loggedin') }}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="pass" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">Log In</button>
+            </form>
+            <br>
+            <div>
+                Don't have an account? <a class="text-info" href="{{ url_for('register') }}">Sign up here</a>.
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

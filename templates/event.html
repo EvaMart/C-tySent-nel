@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron">
+  <div class="container myBackground" style="padding-bottom: 15px">
+    <div class="row">
+
+      <div class="col-md-4 col-md-offset-4">
+        <form class="needs-validation" method=POST action="{{ url_for('event') }}" novalidate>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Location</label>
+          <input type="text" class="form-control" name="location" placeholder="Insert coordinates" required>
+          <div class="invalid-feedback">Please type the location.</div>
+          <div class="valid-feedback">OK!</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail2">Type of Crime</label>
+          <select name="crime", class="form-control" required>
+            <option value="">-</option>
+            <option value="sexual_assault">Sexual assault</option>
+            <option value="emotional_and_verbal">Emotional and verbal abuse</option>
+            <option value="physical_abuse">Physical abuse</option>
+            <option value="financial_abuse">Financial abuse</option>
+            <option value="stalking">Stalking</option>
+          </select>
+          <div class="invalid-feedback">Please select the type of crime.</div>
+          <div class="valid-feedback">OK!</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail3">Layer</label>
+          <select name="layer", class="form-control" required>
+            <option value="">-</option>
+            <option value="street">Street</option>
+            <option value="transportation">Transportation</option>
+            <option value="building">Building</option>
+          </select>
+          <div class="invalid-feedback">Please select a layer.</div>
+          <div class="valid-feedback">OK!</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail4">Date</label>
+          <input name="date" type="date" required>
+          <div class="invalid-feedback">Please select the date.</div>
+          <div class="valid-feedback">OK!</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail5">Description</label>
+          <textarea rows="5" cols="100" name="description" placeholder="Enter a short description of the event" required></textarea>
+          <div class="invalid-feedback">Please type a short description.</div>
+          <div class="valid-feedback">OK!</div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <br>
+      </div>
+      <div class="col-md-2 col-md-offset-2">
+    </div>
+    <div class="col-md-6 col-md-offset-6">
+    <iframe src="{{ url_for('show_map') |autoversion }}" wıdth="300px" height="300px" style="position:relative; top:5%"frameBorder="0"></iframe>
+  </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+{% endblock %}

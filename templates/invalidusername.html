@@ -1,0 +1,13 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<div class="jumbotron">
+  <div class="container myBackground" style="padding-bottom: 15px">
+  <p class="lead">Invalid username/password combination</p>
+  <hr class="my-4">
+  <p><a href="{{ url_for('login') }}">Try again</a>.</p>
+</div>
+</div>
+
+{% endblock %}

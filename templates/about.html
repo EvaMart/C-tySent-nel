@@ -1,0 +1,149 @@
+    {% extends 'layout.html' %}
+
+    {% block body %}
+    <div class="jumbotron">
+  <div class="container myBackground">
+    <h1 class="display-4 text-center">About</h1>
+    <!--<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+  </div>
+</div>
+<br>
+<div class="card bg-light mb-3">
+  <div class="card-header text-center font-weight-bold">About CitySentinel</div>
+  <div class="card-body">
+    <h6 class="font-weight-bold">What is CitySentinel?</h6>
+    <p class="card-text text-justify">CitySentinel is a self-knowledge tool for communities that  arose from the need of safety against crimes that occur in the streets of our city, affecting both locals and tourists. The aim of this application is provide fundamental information about the city that wasn't previously available and build a solid database by all citizens that submit their own experiences, which leads to form a solid network against crime. </p>
+    <br>
+    <h6 class="font-weight-bold">Notable features</h6>
+    <!--Here starts the list-->
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-decisions-list" data-toggle="list" href="#list-decisions" role="tab" aria-controls="decisions">Decisions making</a>
+          <a class="list-group-item list-group-item-action" id="list-intelligence-list" data-toggle="list" href="#list-intelligence" role="tab" aria-controls="intelligence">Collective intelligence</a>
+          <a class="list-group-item list-group-item-action" id="list-implementation-list" data-toggle="list" href="#list-implementation" role="tab" aria-controls="implementation">Measurements implementation</a>
+          <a class="list-group-item list-group-item-action" id="list-technical-list" data-toggle="list" href="#list-technical" role="tab" aria-controls="settings">Technical details</a>
+        </div>
+      </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-decisions" role="tabpanel" aria-labelledby="list-decisions-list">This app help the user in the process of making individuals decisions:
+                <ul class="text-justify" style="list-style-type:circle">
+                  <br>
+                  <li><strong>Decide the safiest way</strong> to go to some place, especially in the night.</li>
+                  <li><strong>Avoid hot spots</strong> of robberies, street violence and similar crimes.</li>
+                  <li><strong>Choose the safiest areas</strong> to live in, if you are moving to the city or just looking for accomodation, or if only visiting the city for a while.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="list-intelligence" role="tabpanel" aria-labelledby="list-intelligence-list">This app is focused on the development of a smart community:
+               <ul class="text-justify" style="list-style-type:circle">
+                 <br>
+                 <li><strong>Powerful database built by crowdsourcing</strong>; users submit their own experiences as witnesses or victims.</li>
+                 <li>Victims, neighbours and organizations can get in contact with each other, building a <strong>strong network against crime</strong>.</li>
+                 <li><strong>Anonymity</strong>. Encouraging users who wish to remain anonymous to report their experience and communicate to those who experienced similar cases.</li>
+               </ul>
+            </div>
+            <div class="tab-pane fade" id="list-implementation" role="tabpanel" aria-labelledby="list-implementation-list">This app brings valuable information to both citizens and organizations:
+               <ul class="text-justify" style="list-style-type: circle">
+                 <br>
+                 <li><strong>More police street presence</strong> can be implemented in the hot spots of robberies, street violence, etc.</li>
+                 <li>Surveillance and <strong>track of the effectiveness</strong> of the measurements by the citizens.</li>
+                 <li><strong>Crime rate can be reduced</strong>, both by the prudence of citizens and by the measures implemented</li>
+                 </ul>
+            </div>
+            <div class="tab-pane fade" id="list-technical" role="tabpanel" aria-labelledby="list-technical-list">Contents of this app:
+              <ul class="text-justify" style="list-style-type: circle">
+                <br>
+                <li><strong>Map with pins</strong> built from information submited by users.</li>
+                <li>Possibility of <strong>filter the map pins</strong> (by type of crime, time, layer etc.).</li>
+                <li><strong>Dashboard</strong>, where the discussion board is implemented and users can get in contact with each other; share experiences, opinions, ask or give support etc.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div><!--Here ends the list-->
+  </div><!--Here ends the card-body-->
+</div><!--Here ends the div class card itself-->
+<div class="card bg-light"><!--Start of card about us-->
+  <div class="card-header text-center font-weight-bold">About Us</div>
+  <div class="card-body">
+    <p class="card-text text-justify">We are four students of Master in Bioinformatics for Health Sciences, at the Univertat Pompeu i Fabra (UPF), Barcelona, and this web-app is our project for the subject Databases and Web Development (DBW). Feel free to visit our individual websites and get better to know us and our personal projects.</p>
+  </div>
+  <div class="card bg-dark text-dark">
+  <img class="card-img" src="{{url_for('static', filename='images/people_work.jpg')}}" alt="Card image">
+  <div class="card-img-overlay">
+    <!--Introduce here the four card presentations of us-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row"><!--start of 2 cards in a row-->
+       <div class="col-sm-6">
+       <div class="card myCards">
+       <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Eva</h5>
+            <ul style="list-style-type: circle">
+            <li>24 y/o, Burgos</li>
+            <li>Bachelor Degree in Biochemistry</li>
+            <li>MSc Bioinformatics for Health Sciences</li>
+            <li>...</li>
+            </ul>
+            <a href="http://mmb.irbbarcelona.org/formacio/~dbw01/" class="btn btn-outline-secondary">Go to Eva's personal site</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-6">
+       <div class="card myCards">
+       <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Lluís</h5>
+            <ul style="list-style-type: circle">
+            <li>27 y/o, Barcelona</li>
+            <li>Bachelor Degree in Biotechnology</li>
+            <li>MSc Bioinformatics for Health Sciences</li>
+            <li>...</li>
+            </ul>
+            <a href="http://mmb.irbbarcelona.org/formacio/~dbw21/" class="btn btn-outline-secondary">Go to Lluís' personal site</a>
+       </div>
+       </div>
+       </div>
+     </div><!--finish of 2 cards in a row-->
+     <br>
+     <br>
+     <br>
+     <div class="row"><!--start of 2 cards in a row-->
+        <div class="col-sm-6">
+        <div class="card myCards">
+        <div class="card-body">
+             <h5 class="card-title text-center font-weight-bold">Antía</h5>
+             <ul style="list-style-type: circle">
+               <li>24 y/o, Barcelona</li>
+               <li>Bachelor Degree in Biological Engineering</li>
+               <li>MSc Bioinformatics for Health Sciences</li>
+               <li>antia.fernadez02@estudiant.upf.edu</li>
+             </ul>
+             <a href="http://mmb.irbbarcelona.org/formacio/~dbw23/" class="btn btn-outline-secondary">Go to Antía's personal site</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-6">
+        <div class="card myCards">
+        <div class="card-body">
+             <h5 class="card-title text-center font-weight-bold">Selen</h5>
+             <ul style="list-style-type: circle">
+             <li>24 y/o, Istanbul/Turkey</li>
+             <li>Bachelor Degree in Molecular Biology and Genetics</li>
+             <li>MSc Bioinformatics for Health Sciences</li>
+             <li>selen.ozkan01@estudiant.upf.edu</li>
+             </ul>
+             <a href="http://mmb.irbbarcelona.org/formacio/~dbw05/" class="btn btn-outline-secondary">Go to Selen's personal site</a>
+        </div>
+        </div>
+        </div>
+  </div>
+</div>
+</div>
+</div><!--end of card "About Us"-->
+
+<br>
+<br>
+    {% endblock%}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+<!--In this form, validation is included-->
+
+{% block body %}
+
+<div class="jumbotron">
+<div class="container myBackground" style="padding-bottom: 15px">
+  <!--form starts here-->
+  <form class="needs-validation" method="POST" action="{{ url_for('register') }}" novalidate>
+    <!--Email adress-->
+    <div class="form-group">
+      <label for="validationCustom01">E-mail</label>
+      <input type="text" class="form-control" name="mail" id="validationCustom01" placeholder="example@example.com" required>
+      <div class = "valid-feedback">OK!</div>
+      <div class = "invalid-feedback">Please introduce an email address!</div>
+    </div>
+    <div class="form-group">
+      <label for="validationCustom02">Username</label>
+      <input type="text"class="form-control" name="username" id="validationCustom02" placeholder="Username" required>
+      <div class="valid-feedback">OK!</div>
+      <div class="invalid-feedback">Please introduce an username!</div>
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <select class="custom-select" name="age" required>
+        <option value="">Select a range of ages</option>
+        <option value="age1">under 18</option>
+        <option value="age2">18 - 23</option>
+        <option value="age3">24 - 29</option>
+        <option value="age4">30 - 35</option>
+        <option value="age5">36 - 40</option>
+        <option value="age6">above 40</option>
+      </select>
+      <div class="invalid-feedback">You should select an age-range</div>
+      <div class="valid-feedback">OK!</div>
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select class="custom-select" name="status" required>
+        <option value="">-</option>
+        <option value="status1">Local</option>
+        <option value="status2">Tourist</option>
+        <option value="status3">Other</option>
+      </select>
+      <div class="invalid-feedback">You should select your status</div>
+      <div class="valid-feedback">OK!</div>
+    </div>
+    <div class="form-group">
+        <label for "validationCustom03">Password</label>
+        <input type="password" class="form-control" name="pass" id="validationCustom03" placeholder="Enter password" required>
+        <div class="valid-feedback">OK!</div>
+        <div class="invalid-feedback">Please enter a password!</div>
+    </div>
+    <button type="submit" class="btn btn-secondary btn-block">Register</button>
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<div class="jumbotron">
+  <div class="container myBackground" style="padding-bottom: 15px">
+  <h1 class="display-4 text-center">Welcome to CitySentinel!</h1>
+  <p class="lead text-center">A web application developed for the city of Barcelona</p>
+  <hr class="my-4">
+  <p class="text-center">City Sentinel is a web-application that displays a map showing the crimes that have taken place in the city of Barcelona based on a database collectively built by the users: victims or witnesses. Its main target audience are people living in and travelling to Barcelona as well as public institutions.</p>
+</div>
+</div>
+
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="{{url_for('static', filename='images/alone.jpg')}}" alt="Card image cap" width="242px" height="180px">
+    <div class="card-body">
+      <h5 class="card-title text-center">About</h5>
+      <p class="card-text text-justify">CitySentinel is a self-knowledge tool for communities that would provide useful information about safety for all passers-by in the city, no matter if they are tourists or locals.</p>
+    </div>
+    <div class="card-footer">
+      <!--<small class="text-muted">Button here to go to about</small>-->
+      <a class="btn btn-outline-secondary btn-sm btn-block" role="button" href="/about">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{{url_for('static', filename='images/metro.jpg')}}" alt="Card image cap" width="242px" height="180px">
+    <div class="card-body">
+      <h5 class="card-title text-center">Map</h5>
+      <p class="card-text text-justify">See CitySentinel map to make your best route in the city taking into account crime events reportated by other users.</p>
+    </div>
+    <div class="card-footer">
+      <!--<small class="text-muted">Button here to go to the map</small>-->
+      <a class="btn btn-outline-secondary btn-sm btn-block" role="button" href="#">Go to the map</a>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{{url_for('static', filename='images/city.jpg')}}" alt="Card image cap" width="242px" height="180px">
+    <div class="card-body">
+      <h5 class="card-title text-center">Join us</h5>
+      <p class="card-text text-justify">Register or log in to submit an event in your city, get in touch with people with the same experiences and much more.</p>
+    </div>
+    <div class="card-footer">
+      <!--<small class="text-muted">Button here for register</small>-->
+      <a class="btn btn-outline-secondary btn-sm btn-block" role="button" href="/login">Log in or register here</a>
+    </div>
+  </div>
+</div>
+
+<br>
+
+{% endblock %}

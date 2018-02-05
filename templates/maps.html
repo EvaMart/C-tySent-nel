@@ -1,0 +1,115 @@
+{% extends 'layout.html'%}
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <style>
+
+.sidemenu{
+position:fixed;
+left:75%;
+bottom:0px;
+widht:100%;
+top:3%;
+right: 3%;
+}
+
+body{
+background:#343a40;
+color: #d3dbe8;
+}
+
+.container1{
+position:relative;
+top: 10%;
+width: 80%;
+height:80%;
+margin-left: 20px;
+margin-right: 20px;
+}
+.control-label{
+  color: #d3dbe8;
+  text-align: left;
+  font-size: 16px;
+}
+.radio{
+  font-size: small;
+}
+.btn {
+    padding: 6px 16px;
+    background: none;
+    font-size: small;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #d3dbe8;
+  	color: #d3dbe8;
+}
+
+.controls{
+  position:relative;
+  right:0px;
+}
+ </style>
+
+<iframe src="{{ url_for('show_map') |autoversion }}" style="position:fixed; top:10%; bottom:0px; right:25%; width: 100%; z-index:1; height:100%;"frameBorder="0"></iframe>
+
+<div class = "sidemenu" >
+  <div class="container1">
+    <b><font color=#d3dbe8>Visualization options</font></b>
+  <form name="form_search" id="map-visualization-form" action="{{ url_for('map') }}" method="post" class="form-horizontal">
+  <fieldset>
+          <legend class="control-label"><small> Layer:</small></legend>
+          <div class="controls">
+            <div class="radio" value='Street'>
+              <label><input type="radio" name="layer" value="street" checked>Street</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="layer" value="public transport">Public transport</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="layer" value="indoors">Indoors</label>
+            </div>
+          </div>
+          <div>
+            <legend class="control-label"><small> Time span:</small></legend>
+            <div class="controls">
+              <div class="radio" value='All day'>
+                <label><input type="radio" name="time_span" value='all_day' checked>All day</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="time_span" value='p1'>00:00 - 6:00</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="time_span" value='p2'>6:00 - 12:00</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="time_span" value='p3'>12:00 - 18:00</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="time_span" value='p4'>18:00 - 24:00</label>
+              </div>
+            </div>
+            <legend class="control-label"><small> Style:</small></legend>
+            <div class="controls">
+              <div class="radio" value='openstreetmap'>
+                <label class="radio-inline"><input type="radio" name="map_tile" value='openstreetmap' checked> OpenStreetMap</label>
+              </div>
+              <div class="radio">
+                <label class="radio-inline"><input type="radio" name="map_tile" value='Stamen Terrain'> Terrain</label>
+              </div>
+              <div class="radio">
+                <label class="radio-inline"><input type="radio" name="map_tile" value='Stamen Toner'> Minimal</label>
+              </div>
+              <div class="radio">
+                <label class="radio-inline"><input type="radio" name="map_tile" value='CartoDB dark_matter'> Dark </label>
+            </div>
+          </div>
+        </div>
+      </br></br>
+        <button type="submit" class="btn btn-default btn-lg"><font color=#d3dbe8>view</font></button>
+      </div>
+  </fieldset>
+  </form>
+    <!--<p>Current coordinates:</p>
+    <p>{{ coords }}</p>-->
+</div>
+
+{% endblock %}
